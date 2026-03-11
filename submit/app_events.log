@@ -1,0 +1,637 @@
+2026-03-11 01:49:07,607 [INFO] anomaly-pipeline: App starting. Targeted Bucket: lrr-anomaly-detection-bucket
+2026-03-11 01:49:19,002 [INFO] anomaly-pipeline: SNS CONFIRMED: Status 200
+2026-03-11 01:49:19,087 [INFO] anomaly-pipeline: SNS CONFIRMED: Status 200
+2026-03-11 01:50:52,808 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015051.csv
+2026-03-11 01:50:52,923 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015051.csv
+2026-03-11 01:50:53,113 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015051.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:50:53,188 [WARNING] anomaly-pipeline: No baseline file found at state/baseline.json. Initializing new baseline.
+2026-03-11 01:50:53,189 [INFO] anomaly-pipeline: Initializing new channel tracking for: temperature
+2026-03-11 01:50:53,190 [INFO] anomaly-pipeline: Initializing new channel tracking for: humidity
+2026-03-11 01:50:53,190 [INFO] anomaly-pipeline: Initializing new channel tracking for: pressure
+2026-03-11 01:50:53,190 [INFO] anomaly-pipeline: Initializing new channel tracking for: wind_speed
+2026-03-11 01:50:53,190 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015051.csv
+2026-03-11 01:50:53,850 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:50:53,850 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:50:53,882 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:50:53,882 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 01:51:52,222 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015151.csv
+2026-03-11 01:51:52,222 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015151.csv
+2026-03-11 01:51:52,299 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015151.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:51:52,395 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 01:51:52,396 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015151.csv
+2026-03-11 01:51:52,617 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:51:52,617 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:51:52,649 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:51:52,649 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 01:52:52,532 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015251.csv
+2026-03-11 01:52:52,533 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015251.csv
+2026-03-11 01:52:52,613 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015251.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:52:52,688 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 01:52:52,689 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015251.csv
+2026-03-11 01:52:52,906 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:52:52,906 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:52:52,935 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:52:52,936 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 01:53:52,909 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015351.csv
+2026-03-11 01:53:52,909 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015351.csv
+2026-03-11 01:53:52,987 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015351.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:53:53,082 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 01:53:53,083 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015351.csv
+2026-03-11 01:53:53,307 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:53:53,308 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:53:53,336 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:53:53,336 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 01:54:52,646 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015451.csv
+2026-03-11 01:54:52,647 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015451.csv
+2026-03-11 01:54:52,719 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015451.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:54:52,820 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 01:54:52,822 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015451.csv
+2026-03-11 01:54:53,044 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:54:53,044 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:54:53,074 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:54:53,074 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 01:55:52,986 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015551.csv
+2026-03-11 01:55:52,986 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015551.csv
+2026-03-11 01:55:53,066 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015551.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:55:53,135 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 01:55:53,136 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015551.csv
+2026-03-11 01:55:53,366 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:55:53,366 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:55:53,400 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:55:53,400 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 01:56:52,601 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015651.csv
+2026-03-11 01:56:52,602 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015651.csv
+2026-03-11 01:56:52,677 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015651.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:56:52,791 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 01:56:52,792 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015651.csv
+2026-03-11 01:56:53,017 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:56:53,017 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:56:53,057 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:56:53,057 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 01:57:53,012 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015752.csv
+2026-03-11 01:57:53,012 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015752.csv
+2026-03-11 01:57:53,090 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015752.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:57:53,162 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 01:57:53,163 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015752.csv
+2026-03-11 01:57:53,385 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:57:53,385 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:57:53,414 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:57:53,415 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 01:58:53,388 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015852.csv
+2026-03-11 01:58:53,389 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015852.csv
+2026-03-11 01:58:53,463 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015852.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:58:53,564 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 01:58:53,565 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015852.csv
+2026-03-11 01:58:53,790 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:58:53,791 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:58:53,822 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:58:53,823 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 01:59:52,796 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T015952.csv
+2026-03-11 01:59:52,797 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T015952.csv
+2026-03-11 01:59:52,868 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T015952.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 01:59:52,946 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 01:59:52,947 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T015952.csv
+2026-03-11 01:59:53,181 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 01:59:53,181 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 01:59:53,212 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 01:59:53,212 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:00:53,358 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020052.csv
+2026-03-11 02:00:53,358 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020052.csv
+2026-03-11 02:00:53,433 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020052.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:00:53,530 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:00:53,531 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020052.csv
+2026-03-11 02:00:53,754 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:00:53,754 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:00:53,784 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:00:53,785 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:01:53,633 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020152.csv
+2026-03-11 02:01:53,635 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020152.csv
+2026-03-11 02:01:53,719 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020152.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:01:53,801 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:01:53,802 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020152.csv
+2026-03-11 02:01:54,063 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:01:54,064 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:01:54,097 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:01:54,097 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:02:53,141 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020252.csv
+2026-03-11 02:02:53,141 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020252.csv
+2026-03-11 02:02:53,216 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020252.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:02:53,298 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:02:53,299 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020252.csv
+2026-03-11 02:02:53,543 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:02:53,543 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:02:53,571 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:02:53,571 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:03:53,618 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020352.csv
+2026-03-11 02:03:53,618 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020352.csv
+2026-03-11 02:03:53,692 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020352.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:03:53,764 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:03:53,765 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020352.csv
+2026-03-11 02:03:53,994 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:03:53,994 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:03:54,036 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:03:54,036 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:04:53,325 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020452.csv
+2026-03-11 02:04:53,325 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020452.csv
+2026-03-11 02:04:53,404 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020452.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:04:53,480 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:04:53,481 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020452.csv
+2026-03-11 02:04:53,710 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:04:53,710 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:04:53,741 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:04:53,742 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:05:53,606 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020552.csv
+2026-03-11 02:05:53,607 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020552.csv
+2026-03-11 02:05:53,686 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020552.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:05:53,758 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:05:53,760 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020552.csv
+2026-03-11 02:05:53,988 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:05:53,988 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:05:54,019 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:05:54,019 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:06:54,055 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020652.csv
+2026-03-11 02:06:54,056 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020652.csv
+2026-03-11 02:06:54,132 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020652.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:06:54,207 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:06:54,209 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020652.csv
+2026-03-11 02:06:54,423 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:06:54,423 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:06:54,473 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:06:54,474 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:07:53,587 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020752.csv
+2026-03-11 02:07:53,587 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020752.csv
+2026-03-11 02:07:53,763 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020752.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:07:53,838 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:07:53,840 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020752.csv
+2026-03-11 02:07:54,116 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:07:54,116 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:07:54,169 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:07:54,169 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:08:53,917 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020853.csv
+2026-03-11 02:08:53,917 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020853.csv
+2026-03-11 02:08:54,022 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020853.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:08:54,162 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:08:54,163 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020853.csv
+2026-03-11 02:08:54,432 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:08:54,433 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:08:54,471 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:08:54,471 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:09:54,322 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T020953.csv
+2026-03-11 02:09:54,322 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T020953.csv
+2026-03-11 02:09:54,401 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T020953.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:09:54,476 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:09:54,478 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T020953.csv
+2026-03-11 02:09:54,699 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:09:54,699 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:09:54,740 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:09:54,740 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:10:53,857 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021053.csv
+2026-03-11 02:10:53,858 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021053.csv
+2026-03-11 02:10:53,932 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021053.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:10:54,003 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:10:54,005 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021053.csv
+2026-03-11 02:10:54,223 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:10:54,224 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:10:54,251 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:10:54,251 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:11:54,266 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021153.csv
+2026-03-11 02:11:54,267 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021153.csv
+2026-03-11 02:11:54,378 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021153.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:11:54,453 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:11:54,454 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021153.csv
+2026-03-11 02:11:54,709 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:11:54,710 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:11:54,740 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:11:54,740 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:12:54,665 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021253.csv
+2026-03-11 02:12:54,666 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021253.csv
+2026-03-11 02:12:54,745 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021253.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:12:54,817 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:12:54,818 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021253.csv
+2026-03-11 02:12:55,060 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:12:55,060 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:12:55,090 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:12:55,090 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:13:54,232 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021353.csv
+2026-03-11 02:13:54,233 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021353.csv
+2026-03-11 02:13:54,315 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021353.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:13:54,387 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:13:54,389 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021353.csv
+2026-03-11 02:13:54,613 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:13:54,613 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:13:54,644 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:13:54,644 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:14:54,719 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021453.csv
+2026-03-11 02:14:54,720 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021453.csv
+2026-03-11 02:14:54,795 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021453.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:14:54,874 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:14:54,875 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021453.csv
+2026-03-11 02:14:55,098 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:14:55,099 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:14:55,128 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:14:55,128 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:15:54,486 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021553.csv
+2026-03-11 02:15:54,486 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021553.csv
+2026-03-11 02:15:54,557 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021553.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:15:54,634 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:15:54,635 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021553.csv
+2026-03-11 02:15:54,853 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:15:54,854 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:15:54,894 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:15:54,894 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:16:54,642 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021653.csv
+2026-03-11 02:16:54,643 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021653.csv
+2026-03-11 02:16:54,729 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021653.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:16:54,801 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:16:54,802 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021653.csv
+2026-03-11 02:16:55,027 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:16:55,028 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:16:55,056 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:16:55,057 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:17:55,146 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021753.csv
+2026-03-11 02:17:55,147 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021753.csv
+2026-03-11 02:17:55,219 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021753.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:17:55,363 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:17:55,364 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021753.csv
+2026-03-11 02:17:55,623 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:17:55,623 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:17:55,666 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:17:55,666 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:18:54,610 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021853.csv
+2026-03-11 02:18:54,610 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021853.csv
+2026-03-11 02:18:54,690 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021853.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:18:54,762 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:18:54,763 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021853.csv
+2026-03-11 02:18:54,986 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:18:54,986 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:18:55,060 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:18:55,060 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:19:55,013 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T021954.csv
+2026-03-11 02:19:55,014 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T021954.csv
+2026-03-11 02:19:55,098 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T021954.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:19:55,244 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:19:55,245 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T021954.csv
+2026-03-11 02:19:55,477 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:19:55,478 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:19:55,506 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:19:55,506 [INFO] anomaly-pipeline: EVENT: Processing Complete. 7/100 anomalies flagged.
+2026-03-11 02:20:55,489 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022054.csv
+2026-03-11 02:20:55,490 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022054.csv
+2026-03-11 02:20:55,570 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022054.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:20:55,663 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:20:55,665 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022054.csv
+2026-03-11 02:20:55,907 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:20:55,908 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:20:55,937 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:20:55,938 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:21:55,152 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022154.csv
+2026-03-11 02:21:55,152 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022154.csv
+2026-03-11 02:21:55,231 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022154.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:21:55,306 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:21:55,307 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022154.csv
+2026-03-11 02:21:55,526 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:21:55,527 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:21:55,556 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:21:55,556 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:22:55,382 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022254.csv
+2026-03-11 02:22:55,383 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022254.csv
+2026-03-11 02:22:55,460 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022254.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:22:55,539 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:22:55,541 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022254.csv
+2026-03-11 02:22:55,767 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:22:55,767 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:22:55,803 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:22:55,803 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:23:55,128 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022354.csv
+2026-03-11 02:23:55,129 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022354.csv
+2026-03-11 02:23:55,208 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022354.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:23:55,285 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:23:55,286 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022354.csv
+2026-03-11 02:23:55,506 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:23:55,506 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:23:55,565 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:23:55,566 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:24:55,468 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022454.csv
+2026-03-11 02:24:55,469 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022454.csv
+2026-03-11 02:24:55,547 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022454.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:24:55,622 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:24:55,623 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022454.csv
+2026-03-11 02:24:55,848 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:24:55,848 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:24:55,880 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:24:55,880 [INFO] anomaly-pipeline: EVENT: Processing Complete. 7/100 anomalies flagged.
+2026-03-11 02:25:55,797 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022554.csv
+2026-03-11 02:25:55,797 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022554.csv
+2026-03-11 02:25:55,867 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022554.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:25:55,942 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:25:55,944 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022554.csv
+2026-03-11 02:25:56,179 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:25:56,179 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:25:56,205 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:25:56,205 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:26:55,328 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022654.csv
+2026-03-11 02:26:55,329 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022654.csv
+2026-03-11 02:26:55,404 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022654.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:26:55,476 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:26:55,478 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022654.csv
+2026-03-11 02:26:55,698 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:26:55,698 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:26:55,726 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:26:55,726 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:27:55,794 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022754.csv
+2026-03-11 02:27:55,795 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022754.csv
+2026-03-11 02:27:55,874 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022754.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:27:56,037 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:27:56,038 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022754.csv
+2026-03-11 02:27:56,263 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:27:56,263 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:27:56,295 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:27:56,295 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:28:56,200 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022854.csv
+2026-03-11 02:28:56,201 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022854.csv
+2026-03-11 02:28:56,268 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022854.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:28:56,339 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:28:56,340 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022854.csv
+2026-03-11 02:28:56,560 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:28:56,560 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:28:56,590 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:28:56,590 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:29:55,708 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T022954.csv
+2026-03-11 02:29:55,709 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T022954.csv
+2026-03-11 02:29:55,786 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T022954.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:29:55,859 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:29:55,861 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T022954.csv
+2026-03-11 02:29:56,084 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:29:56,084 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:29:56,114 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:29:56,114 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:30:56,173 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023055.csv
+2026-03-11 02:30:56,174 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023055.csv
+2026-03-11 02:30:56,263 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023055.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:30:56,336 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:30:56,337 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023055.csv
+2026-03-11 02:30:56,572 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:30:56,572 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:30:56,605 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:30:56,606 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:31:55,739 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023155.csv
+2026-03-11 02:31:55,739 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023155.csv
+2026-03-11 02:31:55,815 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023155.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:31:55,894 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:31:55,896 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023155.csv
+2026-03-11 02:31:56,123 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:31:56,124 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:31:56,159 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:31:56,159 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:32:56,143 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023255.csv
+2026-03-11 02:32:56,144 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023255.csv
+2026-03-11 02:32:56,215 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023255.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:32:56,299 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:32:56,300 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023255.csv
+2026-03-11 02:32:56,524 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:32:56,524 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:32:56,553 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:32:56,553 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:33:56,549 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023355.csv
+2026-03-11 02:33:56,550 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023355.csv
+2026-03-11 02:33:56,624 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023355.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:33:56,772 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:33:56,773 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023355.csv
+2026-03-11 02:33:57,025 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:33:57,025 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:33:57,051 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:33:57,051 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:34:56,177 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023455.csv
+2026-03-11 02:34:56,178 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023455.csv
+2026-03-11 02:34:56,263 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023455.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:34:56,334 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:34:56,335 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023455.csv
+2026-03-11 02:34:56,562 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:34:56,563 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:34:56,595 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:34:56,596 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:35:56,538 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023555.csv
+2026-03-11 02:35:56,538 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023555.csv
+2026-03-11 02:35:56,613 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023555.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:35:56,706 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:35:56,707 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023555.csv
+2026-03-11 02:35:56,936 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:35:56,936 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:35:56,969 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:35:56,970 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:36:56,102 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023655.csv
+2026-03-11 02:36:56,102 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023655.csv
+2026-03-11 02:36:56,177 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023655.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:36:56,301 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:36:56,302 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023655.csv
+2026-03-11 02:36:56,538 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:36:56,538 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:36:56,567 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:36:56,567 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:37:56,359 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023755.csv
+2026-03-11 02:37:56,360 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023755.csv
+2026-03-11 02:37:56,435 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023755.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:37:56,510 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:37:56,511 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023755.csv
+2026-03-11 02:37:56,730 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:37:56,730 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:37:56,761 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:37:56,761 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:38:56,907 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023855.csv
+2026-03-11 02:38:56,908 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023855.csv
+2026-03-11 02:38:56,988 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023855.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:38:57,082 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:38:57,083 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023855.csv
+2026-03-11 02:38:57,300 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:38:57,300 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:38:57,333 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:38:57,333 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:39:56,449 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T023955.csv
+2026-03-11 02:39:56,449 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T023955.csv
+2026-03-11 02:39:56,536 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T023955.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:39:56,620 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:39:56,621 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T023955.csv
+2026-03-11 02:39:56,868 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:39:56,868 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:39:56,899 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:39:56,899 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:40:56,989 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024055.csv
+2026-03-11 02:40:56,990 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024055.csv
+2026-03-11 02:40:57,067 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024055.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:40:57,173 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:40:57,174 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024055.csv
+2026-03-11 02:40:57,412 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:40:57,412 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:40:57,442 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:40:57,442 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:41:57,266 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024156.csv
+2026-03-11 02:41:57,267 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024156.csv
+2026-03-11 02:41:57,344 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024156.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:41:57,448 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:41:57,450 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024156.csv
+2026-03-11 02:41:57,681 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:41:57,681 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:41:57,710 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:41:57,710 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:42:57,838 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024256.csv
+2026-03-11 02:42:57,839 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024256.csv
+2026-03-11 02:42:57,930 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024256.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:42:58,025 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:42:58,026 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024256.csv
+2026-03-11 02:42:58,267 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:42:58,267 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:42:58,299 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:42:58,300 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:43:57,227 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024356.csv
+2026-03-11 02:43:57,228 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024356.csv
+2026-03-11 02:43:57,333 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024356.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:43:57,444 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:43:57,446 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024356.csv
+2026-03-11 02:43:57,726 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:43:57,727 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:43:57,753 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:43:57,753 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:44:57,645 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024456.csv
+2026-03-11 02:44:57,647 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024456.csv
+2026-03-11 02:44:57,727 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024456.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:44:57,809 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:44:57,811 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024456.csv
+2026-03-11 02:44:58,042 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:44:58,042 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:44:58,073 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:44:58,073 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:45:57,103 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024556.csv
+2026-03-11 02:45:57,104 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024556.csv
+2026-03-11 02:45:57,181 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024556.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:45:57,278 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:45:57,280 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024556.csv
+2026-03-11 02:45:57,531 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:45:57,531 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:45:57,563 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:45:57,563 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:46:57,571 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024656.csv
+2026-03-11 02:46:57,572 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024656.csv
+2026-03-11 02:46:57,649 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024656.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:46:57,725 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:46:57,727 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024656.csv
+2026-03-11 02:46:57,950 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:46:57,950 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:46:57,980 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:46:57,981 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:47:57,237 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024756.csv
+2026-03-11 02:47:57,238 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024756.csv
+2026-03-11 02:47:57,310 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024756.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:47:57,380 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:47:57,381 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024756.csv
+2026-03-11 02:47:57,655 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:47:57,655 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:47:57,685 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:47:57,686 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:48:57,425 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024856.csv
+2026-03-11 02:48:57,426 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024856.csv
+2026-03-11 02:48:57,500 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024856.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:48:57,578 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:48:57,579 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024856.csv
+2026-03-11 02:48:57,809 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:48:57,809 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:48:57,838 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:48:57,838 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:49:57,847 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T024956.csv
+2026-03-11 02:49:57,847 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T024956.csv
+2026-03-11 02:49:57,942 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T024956.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:49:58,012 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:49:58,014 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T024956.csv
+2026-03-11 02:49:58,236 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:49:58,236 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:49:58,265 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:49:58,266 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:50:57,417 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025056.csv
+2026-03-11 02:50:57,418 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025056.csv
+2026-03-11 02:50:57,489 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025056.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:50:57,564 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:50:57,566 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025056.csv
+2026-03-11 02:50:57,782 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:50:57,782 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:50:57,812 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:50:57,812 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:51:57,890 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025156.csv
+2026-03-11 02:51:57,891 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025156.csv
+2026-03-11 02:51:57,967 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025156.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:51:58,039 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:51:58,040 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025156.csv
+2026-03-11 02:51:58,272 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:51:58,272 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:51:58,299 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:51:58,299 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:52:58,294 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025257.csv
+2026-03-11 02:52:58,295 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025257.csv
+2026-03-11 02:52:58,377 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025257.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:52:58,454 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:52:58,455 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025257.csv
+2026-03-11 02:52:58,702 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:52:58,702 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:52:58,736 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:52:58,737 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:53:57,806 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025357.csv
+2026-03-11 02:53:57,806 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025357.csv
+2026-03-11 02:53:57,880 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025357.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:53:57,973 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:53:57,974 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025357.csv
+2026-03-11 02:53:58,195 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:53:58,195 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:53:58,227 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:53:58,227 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:54:58,226 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025457.csv
+2026-03-11 02:54:58,227 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025457.csv
+2026-03-11 02:54:58,298 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025457.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:54:58,369 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:54:58,370 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025457.csv
+2026-03-11 02:54:58,600 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:54:58,600 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:54:58,626 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:54:58,627 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:55:58,754 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025557.csv
+2026-03-11 02:55:58,755 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025557.csv
+2026-03-11 02:55:58,826 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025557.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:55:58,901 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:55:58,903 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025557.csv
+2026-03-11 02:55:59,121 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:55:59,121 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:55:59,158 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:55:59,158 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
+2026-03-11 02:56:58,231 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025657.csv
+2026-03-11 02:56:58,231 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025657.csv
+2026-03-11 02:56:58,307 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025657.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:56:58,382 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:56:58,383 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025657.csv
+2026-03-11 02:56:58,604 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:56:58,604 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:56:58,634 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:56:58,635 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:57:58,562 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025757.csv
+2026-03-11 02:57:58,563 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025757.csv
+2026-03-11 02:57:58,671 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025757.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:57:58,760 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:57:58,761 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025757.csv
+2026-03-11 02:57:59,066 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:57:59,066 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:57:59,103 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:57:59,103 [INFO] anomaly-pipeline: EVENT: Processing Complete. 7/100 anomalies flagged.
+2026-03-11 02:58:58,275 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025857.csv
+2026-03-11 02:58:58,275 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025857.csv
+2026-03-11 02:58:58,357 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025857.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:58:58,450 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:58:58,451 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025857.csv
+2026-03-11 02:58:58,678 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:58:58,678 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:58:58,706 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:58:58,707 [INFO] anomaly-pipeline: EVENT: Processing Complete. 6/100 anomalies flagged.
+2026-03-11 02:59:58,598 [INFO] anomaly-pipeline: EVENT: New file detected: raw/sensors_20260311T025957.csv
+2026-03-11 02:59:58,599 [INFO] anomaly-pipeline: EVENT: Processing started for s3://lrr-anomaly-detection-bucket/raw/sensors_20260311T025957.csv
+2026-03-11 02:59:58,668 [INFO] anomaly-pipeline: Loaded 100 rows from raw/sensors_20260311T025957.csv. Columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-11 02:59:58,759 [INFO] anomaly-pipeline: Successfully loaded baseline from s3://lrr-anomaly-detection-bucket/state/baseline.json
+2026-03-11 02:59:58,760 [INFO] anomaly-pipeline: EVENT: Baseline calculations updated for raw/sensors_20260311T025957.csv
+2026-03-11 02:59:58,981 [INFO] anomaly-pipeline: EVENT: Baseline state successfully saved to S3 (state/baseline.json)
+2026-03-11 02:59:58,981 [INFO] anomaly-pipeline: EVENT: Updated baseline.json saved to s3://lrr-anomaly-detection-bucket/
+2026-03-11 02:59:59,015 [ERROR] anomaly-pipeline: Failed to sync logs to S3: name 'BUCKET_NAME' is not defined
+2026-03-11 02:59:59,015 [INFO] anomaly-pipeline: EVENT: Processing Complete. 5/100 anomalies flagged.
