@@ -62,7 +62,7 @@ def sync_logs_to_s3():
         s3_key = f"logs/app_events_{datestamp}.log"
         
         s3.upload_file(LOG_FILE, BUCKET_NAME, s3_key)
-        logger.info(f"EVENT: Synced local logs to s3://{BUCKET_NAME}/{s_key}")
+        logger.info(f"EVENT: Synced local logs to s3://{BUCKET_NAME}/{s3_key}")
     except Exception as e:
         logger.error(f"Failed to sync logs to S3: {e}")
 
