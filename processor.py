@@ -2,6 +2,7 @@
 import json
 import io
 import boto3
+import os
 import pandas as pd
 import logging
 from datetime import datetime
@@ -21,6 +22,15 @@ s3 = boto3.client("s3")
 NUMERIC_COLS = ["temperature", "humidity", "pressure", "wind_speed"]
 
 LOG_FILE = "app_events.log"
+
+# Initialize AWS clients / get Bucket name
+try:
+    s3 = boto3.client("s3")
+    BUCKET_NAME = os.environ["BUCKET_NAME"]
+    logger.info(f"App starting. Targeted Bucket: {BUCKET_NAME}")
+except KeyError:
+    logger.error("CRITICAL: Environment variable 'BUCKET_NAME' is missing.")
+    raise RuntimeError("BUCKET_NAME not set")
 
 def process_file(bucket: str, key: str):
     # LOGGING: Record the start of a new processing event
