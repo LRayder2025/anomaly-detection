@@ -7,7 +7,6 @@ import logging
 from datetime import datetime
 
 # Import the sync function from your main app file
-from app import sync_logs_to_s3
 from baseline import BaselineManager
 from detector import AnomalyDetector
 
@@ -96,6 +95,7 @@ def process_file(bucket: str, key: str):
 
         # 8. SYNC LOGS TO S3
         # As per requirements, we backup the local log file to S3 whenever a baseline is saved.
+        from app import sync_logs_to_s3
         sync_logs_to_s3()
 
         logger.info(f"EVENT: Processing Complete. {anomaly_count}/{len(df)} anomalies flagged.")

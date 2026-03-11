@@ -1,0 +1,7 @@
+.env
+# Ignore the actual values
+*.tfvars
+# Ignore the terraform state (contains metadata about your infra)
+*.tfstate
+*.tfstate.backup
+.terraform/

@@ -1,1 +1,278 @@
 # cloudformation solution goes here
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Infrastructure provisioning for anomaly detection application using CloudFormation'
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: Name of the S3 bucket
+    AllowedPattern: "^[a-z0-9-]{3,63}$"
+    
+  Region:
+    Type: String
+    Default: us-east-1
+    Description: AWS region for resources
+    
+  InstanceType:
+    Type: String
+    Default: t3.micro
+    Description: EC2 instance type
+    
+  AmiId:
+    Type: String
+    Description: AMI ID (Ubuntu 24.04 LTS)
+    Default: ami-04b70fa74e45c3917 # Current Ubuntu 24.04 LTS in us-east-1
+    
+  KeyName:
+    Type: String
+    Description: EC2 key pair name for SSH access
+    
+  YourIpAddress:
+    Type: String
+    Description: Your IP address for SSH access (format 1.2.3.4/32)
+    AllowedPattern: "^[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}/32$"
+    
+  GitHubUsername:
+    Type: String
+    Description: Your GitHub username for cloning the anomaly-detection repo
+
+Resources:
+  # ============== S3 BUCKET ==============
+  AnomalyDetectionBucket:
+    Type: AWS::S3::Bucket
+    DependsOn: SNSTopic
+    Properties:
+      BucketName: !Ref BucketName
+      VersioningConfiguration:
+        Status: Enabled
+      NotificationConfiguration:
+        TopicConfigurations:
+          - Event: s3:ObjectCreated:*
+            Topic: !Ref SNSTopic
+            Filter:
+              S3Key:
+                Rules:
+                  - Name: prefix
+                    Value: raw/
+                  - Name: suffix
+                    Value: .csv
+      Tags:
+        - Key: Name
+          Value: anomaly-detection-bucket
+        - Key: Lab
+          Value: IaC-Python
+
+  # ============== IAM ROLE ==============
+  EC2Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: anomaly-detection-ec2-role
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      Tags:
+        - Key: Name
+          Value: anomaly-detection-ec2-role
+
+  # ============== IAM POLICY ==============
+  S3AccessPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: S3AccessPolicy
+      Roles: 
+        - !Ref EC2Role
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:GetObject
+              - s3:PutObject
+              - s3:DeleteObject
+              - s3:ListBucket
+            Resource:
+              - !GetAtt AnomalyDetectionBucket.Arn
+              - !Sub '${AnomalyDetectionBucket.Arn}/*'
+
+  # ============== INSTANCE PROFILE ==============
+  EC2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: anomaly-detection-instance-profile
+      Roles:
+        - !Ref EC2Role
+
+  # ============== SECURITY GROUP ==============
+  EC2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: anomaly-detection-sg
+      GroupDescription: Security group for anomaly detection EC2 instance
+      SecurityGroupIngress:
+        # SSH access from your IP
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: !Ref YourIpAddress
+          Description: SSH access from your IP
+        # FastAPI access from anywhere
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
+          CidrIp: 0.0.0.0/0
+          Description: FastAPI API access
+      Tags:
+        - Key: Name
+          Value: anomaly-detection-sg
+
+  # ============== EC2 INSTANCE ==============
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref AmiId
+      InstanceType: !Ref InstanceType
+      KeyName: !Ref KeyName
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      SecurityGroupIds:
+        - !Ref EC2SecurityGroup
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          # Redirect all output to a log file for debugging if the instance doesn't start
+          exec > /var/log/user-data.log 2>&1
+          set -x
+
+          # 1. Set environment variables for both the current script and future logins
+          echo "BUCKET_NAME=${BucketName}" >> /etc/environment
+          export BUCKET_NAME="${BucketName}"
+
+          echo "Starting setup..."
+          apt-get update -y
+          apt-get install -y python3-pip python3-venv git curl
+          
+          # 2. Move to home directory and clone repo
+          cd /home/ubuntu
+          # Cloning as root then changing ownership ensures the 'ubuntu' user can manage it later
+          git clone https://github.com/LRayder2025/anomaly-detection.git
+          cd anomaly-detection
+          
+          # 3. Initialize Python Virtual Environment
+          python3 -m venv venv
+          ./venv/bin/pip install --upgrade pip
+          # Ensure requirements.txt is in the root of your repo
+          ./venv/bin/pip install -r requirements.txt
+          
+          # 4. Fix permissions so the 'ubuntu' user owns the app and virtualenv
+          chown -R ubuntu:ubuntu /home/ubuntu/anomaly-detection
+          
+          # 5. Launch the application
+          # We use 'python3 -m uvicorn' because 'fastapi run' can sometimes behave 
+          # differently depending on the FastAPI version installed.
+          # 'nohup' and '&' allow the process to persist after the script finishes.
+          echo "Launching FastAPI..."
+          nohup /home/ubuntu/anomaly-detection/venv/bin/python3 -m uvicorn app:app --host 0.0.0.0 --port 8000 > /home/ubuntu/app_log.txt 2>&1 &
+
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 16
+            VolumeType: gp2
+            DeleteOnTermination: true
+      Tags:
+        - Key: Name
+          Value: !Sub "anomaly-detection-${AWS::StackId}"
+
+  # ============== ELASTIC IP ==============
+  ElasticIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref EC2Instance
+      Tags:
+        - Key: Name
+          Value: anomaly-detection-eip
+
+  # ============== SNS TOPIC ==============
+  SNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: ds5220-dp1
+      DisplayName: Anomaly Detection S3 Notifications
+      Tags:
+        - Key: Name
+          Value: ds5220-dp1
+
+  # ============== SNS SUBSCRIPTION ==============
+  SNSSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Protocol: http
+      TopicArn: !Ref SNSTopic
+      Endpoint: !Sub 'http://${ElasticIP}:8000/notify'
+
+# ============== SNS TOPIC POLICY ==============
+  SNSTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      Topics:
+        - !Ref SNSTopic
+      # CHANGE THIS FROM PolicyText TO PolicyDocument
+      PolicyDocument: 
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowS3ToPublish
+            Effect: Allow
+            Principal:
+              Service: s3.amazonaws.com
+            Action: SNS:Publish
+            Resource: !Ref SNSTopic
+            Condition:
+              ArnLike:
+                aws:SourceArn: !Sub 'arn:aws:s3:::${BucketName}'
+
+Outputs:
+  InstanceId:
+    Description: EC2 Instance ID
+    Value: !Ref EC2Instance
+    Export:
+      Name: !Sub '${AWS::StackName}-InstanceId'
+
+  PublicIP:
+    Description: Elastic IP address of the instance
+    Value: !Ref ElasticIP
+    Export:
+      Name: !Sub '${AWS::StackName}-PublicIP'
+
+  BucketNameOutput:
+    Description: S3 bucket name
+    Value: !Ref AnomalyDetectionBucket
+    Export:
+      Name: !Sub '${AWS::StackName}-BucketName'
+
+  SNSTopicArn:
+    Description: SNS Topic ARN
+    Value: !Ref SNSTopic
+    Export:
+      Name: !Sub '${AWS::StackName}-SNSTopicArn'
+
+  FastAPIEndpoint:
+    Description: FastAPI endpoint URL
+    Value: !Sub 'http://${ElasticIP}:8000'
+    Export:
+      Name: !Sub '${AWS::StackName}-FastAPIEndpoint'
+
+  NotificationEndpoint:
+    Description: SNS notification endpoint
+    Value: !Sub 'http://${ElasticIP}:8000/notify'
+    Export:
+      Name: !Sub '${AWS::StackName}-NotificationEndpoint'
+
+  SecurityGroupId:
+    Description: Security Group ID
+    Value: !Ref EC2SecurityGroup
+    Export:
+      Name: !Sub '${AWS::StackName}-SecurityGroupId'
