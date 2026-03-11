@@ -20,6 +20,8 @@ s3 = boto3.client("s3")
 # Define the columns we are monitoring for anomalies
 NUMERIC_COLS = ["temperature", "humidity", "pressure", "wind_speed"]
 
+LOG_FILE = "app_events.log"
+
 def process_file(bucket: str, key: str):
     # LOGGING: Record the start of a new processing event
     logger.info(f"EVENT: Processing started for s3://{bucket}/{key}")
