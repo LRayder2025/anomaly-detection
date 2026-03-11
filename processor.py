@@ -96,6 +96,20 @@ def process_file(bucket: str, key: str):
         # 8. SYNC LOGS TO S3
         # As per requirements, we backup the local log file to S3 whenever a baseline is saved.
         from app import sync_logs_to_s3
+        def sync_logs_to_s3():
+            """
+            Backs up the local app_events.log to the S3 bucket.
+            Called whenever a baseline update occurs.
+            """
+            try:
+                # We append a date to the S3 key so we have a history of logs
+                datestamp = datetime.utcnow().strftime('%Y-%m-%d')
+                s3_key = f"logs/app_events_{datestamp}.log"
+        
+                s3.upload_file(LOG_FILE, BUCKET_NAME, s3_key)
+                logger.info(f"EVENT: Synced local logs to s3://{BUCKET_NAME}/{s3_key}")
+            except Exception as e:
+                logger.error(f"Failed to sync logs to S3: {e}")
         sync_logs_to_s3()
 
         logger.info(f"EVENT: Processing Complete. {anomaly_count}/{len(df)} anomalies flagged.")
