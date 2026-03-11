@@ -82,8 +82,8 @@ async def handle_sns(request: Request, background_tasks: BackgroundTasks):
     if msg_type == "SubscriptionConfirmation":
         confirm_url = body.get("SubscribeURL")
         if confirm_url:
-            requests.get(confirm_url)
-            logger.info(f"SNS Subscription confirmed via URL: {confirm_url}")
+            res = requests.get(confirm_url)
+            logger.info(f"SNS CONFIRMED: Status {res.status_code}") # Log the actual result
             return {"status": "confirmed"}
         
     # Handle S3 Event Notifications
